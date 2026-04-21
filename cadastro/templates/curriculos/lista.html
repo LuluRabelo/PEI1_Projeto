@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Currículos Cadastrados</title>
+</head>
+<body>
+    <h1>Currículos Cadastrados</h1>
+    {% for curriculo in curriculos %}
+        <div>
+            <h2>{{ curriculo.nome }}</h2>
+            <p><strong>Endereço:</strong> {{ curriculo.endereco }}</p>
+            <p><strong>Telefone:</strong> {{ curriculo.telefone }}</p>
+            <p><strong>Formação:</strong> {{ curriculo.formacao }}</p>
+            <p><strong>Experiência:</strong> {{ curriculo.experiencia }}</p>
+            <p><strong>Certificados:</strong> {{ curriculo.certificados }}</p>
+            <p><strong>Habilidades:</strong> {{ curriculo.habilidades }}</p>
+            <p><strong>Idiomas:</strong> {{ curriculo.idiomas }}</p>
+            <hr>
+        </div>
+    {% empty %}
+        <p>Nenhum currículo cadastrado.</p>
+    {% endfor %}
+    <a href="{% url 'criar_curriculo' %}">Criar novo currículo</a>
+</body>
+</html>

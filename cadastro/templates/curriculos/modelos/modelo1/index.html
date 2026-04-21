@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% load static %}
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Currículo</title>
+  <link rel="stylesheet" href="{% static 'curriculos/modelos/modelo1/style.css' %}">
+</head>
+
+<body>
+  <div class="container">
+    <div class="profile">
+      <div class="profile_container">
+        <div>
+          <h1 class="profile_name">
+            <span class="profile_name_lastName">{{ nome }}</span>
+          </h1>
+        </div>
+      </div>
+    </div>
+    <div class="group-1">
+      <div class="skills">
+        <h3 class="title">Habilidades</h3>
+        <p class="description">{{ habilidades }}</p>
+      </div>
+      <div class="edu">
+        <h3 class="title">Formação</h3>
+        <p class="description">{{ formacao }}</p>
+      </div>
+
+      <div class="certification">
+        <h3 class="title">Certificados</h3>
+        <p class="description">{{ certificados }}</p>
+      </div>
+    </div>
+    <div class="group-2">
+      <div class="exp">
+        <h3 class="title">Experiência</h3>
+        <p class="description">{{ experiencia }}</p>
+      </div>
+      <div class="idiomas">
+        <h3 class="title">Idiomas</h3>
+        <p class="description">{{ idiomas }}</p>
+      </div>
+    </div>
+    <hr>
+    <div class="group-3">
+      <div class="contact">
+        <h3 class="title">Contato</h3>
+        <div class="contact_info">
+          <p class="description">
+            {{ endereco }}
+          </p>
+          <p class="description">
+            {{ telefone }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
