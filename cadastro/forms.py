@@ -7,7 +7,7 @@ class CurriculoForm(forms.ModelForm):
     #Diz para usar todos os campos do model Curriculo no formulário
         model = Curriculo
         fields = '__all__'
-
+        #Personaliza os campos
         widgets = {
             'nome': forms.TextInput(attrs={
                 'class': 'form-control',
@@ -33,4 +33,4 @@ class CurriculoForm(forms.ModelForm):
     'nome': 'Nome completo',
     'telefone': 'Telefone',
     'formacao': 'Formação acadêmica',
-}
+}       
