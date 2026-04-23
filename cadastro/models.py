@@ -1,3 +1,4 @@
+#Cria um modelo (model) para o banco de dados
 from django.db import models
 
 ## removi a duplicata 

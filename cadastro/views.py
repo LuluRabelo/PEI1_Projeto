@@ -1,7 +1,9 @@
+#Recebe as respostas do formulário, valida elas, cria e mostra o currículo 
 from django.shortcuts import render, redirect
 from .forms import CurriculoForm
 
 def criar_curriculo(request):
+    #Se houver requisição, algo enviado no formulário, valida as informaçãoes
     if request.method == "POST":
         form = CurriculoForm(request.POST)
         if form.is_valid():
